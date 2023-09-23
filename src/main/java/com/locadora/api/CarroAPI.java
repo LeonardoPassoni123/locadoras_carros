@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/carro")
+@CrossOrigin
 public class CarroAPI {
 
     private final CarroService service;

@@ -52,7 +52,7 @@ public class UsuarioService {
         this.repository.deleteAll();
     }
 
-    public Boolean validateCredentials(LoginInformacoesDTO dto){
+    public Boolean validateCredentials(Usuario dto){
         return this.repository.findLoginInformation(dto.getEmail(), dto.getSenha());
     }
 }
