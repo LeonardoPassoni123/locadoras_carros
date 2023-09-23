@@ -19,13 +19,16 @@ public class Carro {
     @Column(name = "ano")
     private String ano;
 
+    @Column(name = "marca")
+    private String marca;
+
     @Column(name = "modelo")
     private String modelo;
 
     @Column(name = "placa")
     private String placa;
 
-    @Column(name = "especificacoes")
+    @Column(name = "especificacoes",length = 2000 )
     private String especificacoes;
 
 }

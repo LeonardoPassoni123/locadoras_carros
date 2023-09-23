@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/locacao")
+@CrossOrigin
 public class LocacaoAPI {
 
     private final LocacaoService service;

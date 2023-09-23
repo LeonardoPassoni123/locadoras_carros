@@ -19,4 +19,10 @@ public class Cliente {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "telefone")
+    private String telefone;
+
+    @Column(name = "cpf")
+    private String cpf;
+
 }

@@ -34,11 +34,7 @@ public class Locacao {
 
     @NotNull
     @Column(name = "data_retorno")
-    private Date dateRetorno;
-
-    @NotNull
-    @Column(name = "num_cnh")
-    private String cnh;
+    private Date dataRetorno;
 
     @Column(name = "valorTotal")
     private BigDecimal valorTotal;

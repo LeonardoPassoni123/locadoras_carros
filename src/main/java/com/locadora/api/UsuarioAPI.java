@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/usuario")
+@CrossOrigin
 public class UsuarioAPI {
 
     private final UsuarioService service;
@@ -53,8 +54,8 @@ public class UsuarioAPI {
         return ResponseEntity.accepted().build();
     }
 
-    @GetMapping("/validate-credentials")
-    public ResponseEntity<Boolean> validateCredentials(@RequestBody LoginInformacoesDTO dto){
+    @PostMapping("/validate-credentials")
+    public ResponseEntity<Boolean> validateCredentials(@RequestBody Usuario dto){
         return ResponseEntity.ok(this.service.validateCredentials(dto));
     }
 }
