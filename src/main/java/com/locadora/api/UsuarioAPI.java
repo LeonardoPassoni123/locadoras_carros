@@ -58,4 +58,9 @@ public class UsuarioAPI {
     public ResponseEntity<Boolean> validateCredentials(@RequestBody Usuario dto){
         return ResponseEntity.ok(this.service.validateCredentials(dto));
     }
+
+    @GetMapping("/email-already-exists")
+    public ResponseEntity<Boolean> emailAlreadyExists(@RequestParam("email") String email){
+        return ResponseEntity.ok(this.service.emailAlreadyExists(email));
+    }
 }
