@@ -1,6 +1,7 @@
 package com.locadora.model;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.locadora.model.helpers.LocacaoStatus;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -30,10 +31,12 @@ public class Locacao {
 
     @NotNull
     @Column(name = "data_inicio")
+    @JsonFormat(pattern="yyyy-MM-dd")
     private Date dataInicio;
 
     @NotNull
     @Column(name = "data_retorno")
+    @JsonFormat(pattern="yyyy-MM-dd")
     private Date dataRetorno;
 
     @Column(name = "valorTotal")

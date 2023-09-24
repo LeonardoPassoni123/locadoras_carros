@@ -31,9 +31,6 @@ public class UsuarioService {
 
     @Transactional
     public Usuario save(Usuario usuario){
-        if(Boolean.TRUE.equals(this.repository.emailExists(usuario.getEmail()))){
-            throw new ValidationException("Email já cadastrado.");
-        }
         return this.repository.save(usuario);
     }
 
@@ -54,5 +51,9 @@ public class UsuarioService {
 
     public Boolean validateCredentials(Usuario dto){
         return this.repository.findLoginInformation(dto.getEmail(), dto.getSenha());
+    }
+
+    public Boolean emailAlreadyExists(String email){
+        return this.repository.emailExists(email);
     }
 }
